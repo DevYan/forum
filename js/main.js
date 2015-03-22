@@ -1,4 +1,7 @@
 $(function(){
+/*页面过短时设置主题部分长度*/
+	$('#main').css('minHeight',($(window).height()-275)+'px');
+
 /*弹出搜索框*/
 	$('.search-container').click(function(e){
 		e.preventDefault();
@@ -45,4 +48,42 @@ $(function(){
 			commentBox.hide();
 		}
 	})
+
+/*
+ * 设置页面
+ */
+ //导航切换
+ $('.setting-nav li').click(function(e){
+ 	e.preventDefault();
+ 	$('.setting-nav li').removeClass('active');
+ 	$(this).addClass('active');
+
+ 	$('.option-panel').removeClass('active');
+ 	var index = $('.setting-nav li').index($(this));
+ 	if (index == 0) {
+
+ 	}else if (index == 1) {
+ 		$('.change-head-pic').addClass('active');
+ 	}else{
+ 		$('.change-password').addClass('active');
+ 	}
+ })
+
+/*
+ * DICE页面
+ */
+ //导航切换
+ $('.dice-nav li').click(function(e){
+ 	e.preventDefault();
+ 	$('.dice-nav li').removeClass('active');
+ 	$(this).addClass('active');
+
+ 	$('#dice table').removeClass('active');
+ 	var index = $('.dice-nav li').index($(this));
+ 	if (index % 2 == 0) {
+ 		$('.table-1').addClass('active');
+ 	}else{
+ 		$('.table-2').addClass('active');
+ 	}
+ })
 })

@@ -1,0 +1,34 @@
+#notFound{
+	margin-top: 40px;
+	.not-title{
+		font-size: 12px;
+		color: #929295;
+	}
+	.not-box{
+		margin-top: 10px;
+		padding:20px 30px;
+		width: 1140px;
+		height: 410px;
+		background:#1d1d21 url('../img/404.png') right bottom no-repeat;
+		h1{
+			font-size: 16px;
+			color: #aeff00;
+			text-indent: -10px;
+			margin-bottom: 35px;
+		}
+		a{
+			font-size: 20px;
+			color:#8fc31f;
+			display: inline-block;
+		}
+		.plain{
+			font-size: 14px;
+			line-height: 20px;
+			color: #40453f;
+		}
+		.split{
+			margin-bottom: 30px;
+		}
+	}
+
+}

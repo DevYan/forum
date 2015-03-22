@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DICE</title>
+	<script src="../js/jquery.js"></script>
+	<link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+	<div id="header">
+		<div class="content">
+			<a href="" id="logo">
+				<img src="../img/logo.png" alt="">
+			</a>
+			<ul class="options">
+				<li class="search-container">
+					<a href="">
+						<img src="../img/search.png" alt="">
+					</a>
+					<input type="text" class="search-box">
+				</li>
+				<li>
+					<a href="">
+						<img src="../img/mail.png" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="../img/wallet.png" alt="">
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="../img/head.png" alt="">
+					</a>
+					<ul class="drop clear">
+						
+					</ul>
+				</li>
+				<li class="lan">
+					<a href="">
+						EN
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="main" class="clear">
+		<div class="content">
+			<div class="bread">
+				<a href="">首页</a>
+				<span>></span>
+				<span>2084DICE</span>
+			</div>
+			<div id="dice">
+				<div class="dice-main">
+					<div class="banner">
+						<span class="logo"></span>
+						<p class="banner-title">2084DICE</p>
+						<p class="banner-money">
+							<span class="s">账户余额:</span>
+							<span class="w">562200</span>
+						</p>
+					</div>
+					<div class="roll">
+						<div class="row1 clear">
+							<div class="item">
+								<p>投注金额</p>
+								<span class="type1">20</span>
+							</div>
+							<div class="progress">
+								<p>调整概率</p>
+								<div class="bar-bg">
+									<div class="bar"></div>
+								</div>
+								<p class="ruler">
+									<span>0%</span>
+									<span>25%</span>
+									<span>50%</span>
+									<span>75%</span>
+									<span>100%</span>
+								</p>
+							</div>
+							<div class="item">
+								<p>预计收益</p>
+								<span class="type2">5000</span>
+							</div>
+						</div>
+						<div class="row2 clear">
+							<div class="item s">
+								<p>胜率</p>
+								<span class="type1">20<em>%</em></span>
+							</div>
+							<div class="item s">
+								<p>低于以下数字获胜</p>
+								<span class="type2">15631</span>
+							</div>
+							<div class="item">
+								<p>返还倍数</p>
+								<span class="type2">X5672</span>
+							</div>
+						</div>
+						<div class="row3">
+							<span class="btn-roll">ROLL</span>
+						</div>
+					</div>
+					<ul class="dice-nav">
+						<li class="active"><a href="">我的投注</a></li>
+						<li><a href="">最新投注</a></li>
+						<li><a href="">最新获胜</a></li>
+						<li><a href="">最大获胜</a></li>
+						<li><a href="">获胜排行榜</a></li>
+					</ul>
+					<table class="table-1 active">
+						<tr class="fst">
+							<th>结果</th>
+							<th>幸运数/范围</th>
+							<th>投注</th>
+							<th>胜率/返还倍数</th>
+							<th>收益</th>
+							<th>账户</th>
+						</tr>
+						<tr>
+							<td class="em">Win</td>
+							<td><span class="em">234</span>/12324</td>
+							<td>2000</td>
+							<td>33%/x2.5</td>
+							<td><span class="em">+56780</span></td>
+							<td>400000</td>
+						</tr>
+						<tr>
+							<td>Lose</td>
+							<td>5232/222</td>
+							<td>54</td>
+							<td>21%/x6.5</td>
+							<td>-54</td>
+							<td>800000</td>
+						</tr>
+						<tr>
+							<td>Lose</td>
+							<td>35535/4542</td>
+							<td>54</td>
+							<td>21%/x6.5</td>
+							<td>-54</td>
+							<td>764334</td>
+						</tr>
+						<tr>
+							<td>Lose</td>
+							<td>52/43</td>
+							<td>54</td>
+							<td>21%/x6.5</td>
+							<td>-54</td>
+							<td>664334</td>
+						</tr>
+						<tr>
+							<td class="em">Win</td>
+							<td><span class="em">3</span>/12324</td>
+							<td>2000</td>
+							<td>33%/x2.5</td>
+							<td><span class="em">+56780</span></td>
+							<td>400000</td>
+						</tr>
+						<tr>
+							<td>Lose</td>
+							<td>234/12324</td>
+							<td>54</td>
+							<td>21%/x6.5</td>
+							<td>-54</td>
+							<td>864334</td>
+						</tr>
+					</table>
+					<table class="table-2">
+						<tr class="fst">
+							<th>用户</th>
+							<th>结果</th>
+							<th>幸运数/范围</th>
+							<th>投注</th>
+							<th>胜率/返还倍数</th>
+							<th>收益</th>
+						</tr>
+						<tr>
+							<td class="em">地下天鹅绒</td>
+							<td class="em">Win</td>
+							<td><span class="em">234</span>/12324</td>
+							<td>2000</td>
+							<td>33%/x2.5</td>
+							<td class="em">56780</td>
+						</tr>
+						<tr>
+							<td class="em">留山羊胡的男人</td>
+							<td>Lose</td>
+							<td>5232/222</td>
+							<td>54</td>
+							<td>21%/x6.5</td>
+							<td>-54</td>
+						</tr>
+						<tr>
+							<td class="em">btc比特帝国</td>
+							<td>Lose</td>
+							<td>35535/4542</td>
+							<td>54</td>
+							<td>21%/x6.5</td>
+							<td>-54</td>
+						</tr>
+						<tr>
+							<td class="em">STG-MC</td>
+							<td>Lose</td>
+							<td>52/43</td>
+							<td>54</td>
+							<td>21%/x6.5</td>
+							<td>-54</td>
+						</tr>
+						<tr>
+							<td class="em">爱斯特拉冈</td>
+							<td class="em">Win</td>
+							<td><span class="em">3</span>/322</td>
+							<td>2000</td>
+							<td>33%/x2.5</td>
+							<td class="em">+56780</td>
+						</tr>
+						<tr>
+							<td class="em">Arafat</td>
+							<td>Lose</td>
+							<td>234/12324</td>
+							<td>54</td>
+							<td>21%/x6.5</td>
+							<td>-54</td>
+						</tr>
+					</table>
+				</div>
+				<div class="dice-side">
+					<h3 class="side-title">About 2084DICE</h3>
+					<p>最近北京理工大的科学家发现蜘蛛丝有助于提高电池性能。</p>
+					<p>从移动设备到电动汽车的锂离子电池，石墨是其中的一个关键组成部分。当锂离子电池充电时，锂离子从电池的正极扩散并吸附于负极附近的石墨上，而放电时锂离子从石墨中重新移动到正极。</p>
+					<p>然而，石墨其实相对的并不适合储存锂离子，所以依赖石墨的锂离子电池的容量都不会太高。现在，北京理工大学的科学家发现，利用蜘蛛丝取代石墨，作为锂离子的存储介质，能够显著的提升电池性能。</p>
+					<p>蜘蛛丝的以其强度和韧性上的特点，很早就被科学家引入到电子设备的设计中了。例如，一个覆盖有蜘蛛丝涂层的碳纳米纤维要比单纯的蜘蛛丝纤维的导电性高，而且强度也是后者的三倍。</p>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<div id="about">
+		<div class="content">
+			<div class="about-left">
+				<p class="l-title">
+					站务管理
+				</p>
+				<p class="l-content">
+					<img src="../img/m.png" alt="">
+					<span>velvet1981@gmail.com</span>
+					<img src="../img/q.png" alt="">
+					<span>30076568</span>
+				</p>
+				<p class="l-title">
+					申请专区
+				</p>
+				<p class="l-content">
+					<img src="../img/m.png" alt="">
+					<span>velvet1981@gmail.com</span>
+					<img src="../img/q.png" alt="">
+					<span>30076568</span>
+				</p>
+				<p class="l-title">
+					广告合作
+				</p>
+				<p class="l-content">
+					<img src="../img/m.png" alt="">
+					<span>velvet1981@gmail.com</span>
+					<img src="../img/q.png" alt="">
+					<span>30076568</span>
+				</p>
+			</div>
+			<div class="about-middle">
+				<p class="m-title">合作伙伴</p>
+				<ul class="partner clear">
+					<li><a href="">玩币族</a></li>
+					<li><a href="">比特币中国</a></li>
+					<li><a href="">btc123</a></li>
+					<li><a href="">币存</a></li>
+					<li><a href="">btckan</a></li>
+					<li><a href="">okcoin</a></li>
+					<li><a href="">巴比特</a></li>
+					<li><a href="">bitcoin.org</a></li>
+					<li><a href="">火币网</a></li>
+					<li><a href="">广天矿机</a></li>
+					<li><a href="">btciontalk</a></li>
+					<li><a href="">Coin711导航网</a></li>
+					<li><a href="">搜搜比特币</a></li>
+				</ul>
+			</div>
+			<ul class="about-right clear">
+				<li>
+					<a href="">
+						<img src="../img/weibo.png" alt="">
+						<p>新浪微博</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="../img/wechat.png" alt="">
+						<p>微信公号</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="../img/qq.png" alt="">
+						<p>QQ群</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="content">
+			<p class="copyright">
+				COPYRIGHT © 2009-2013 2084BBS All Rights Reserved
+			</p>
+			<ul class="footer-right">
+				<li><a href="">关于2084</a></li>
+				<li><a href="">工作机会</a></li>
+				<li><a href="">商务合作</a></li>
+			</ul>
+		</div>
+	</div>
+	<script src="../js/main.js"></script>
+</body>
+</html>

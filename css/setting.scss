@@ -1,0 +1,256 @@
+#setting{
+	margin-top: 60px;
+	.setting-left{
+		width: 280px;
+		height: 420px;
+		background:#242429;
+		float: left;
+		.user{
+			width: 260px;
+			height: 94px;
+			padding: 20px 0 20px 20px;
+			border-bottom: 1px solid #2b2b31;
+			background:#1d1d21;
+			.head-pic{
+				display: block;
+				float: left;
+				margin-top: -30px;
+				margin-right: 10px;
+			}
+			.ur{
+				float: left;
+				.name{
+					font-size: 16px;
+					color: #719920;
+					span{
+						display: inline-block;
+						width: 18px;
+						height: 18px;
+						background:#3c3c45;
+						vertical-align: middle;
+						margin-left: 5px;
+					}
+				}
+				.money{
+					margin-top: 10px;
+					font-size: 12px;
+					color: #929295;
+					.s{
+						color: #c5d8a5;
+					}
+				}
+				.contact{
+					padding-left: 10px;
+					a{
+						display: inline-block;
+						float: left;
+						height: 32px;
+						border: 1px solid #40453f;
+						margin-top: 20px;
+					}
+					.mail{
+						width: 32px;
+						background:transparent url('../img/mail-ico.png') center center no-repeat;
+					}
+					.care{
+						font-size: 12px;
+						line-height: 32px;
+						color: #929295;
+						padding:0 5px; 
+						margin-left: 10px;
+						padding-left: 20px;
+						position: relative;
+						span{
+							position: absolute;
+							left: 5px;
+							font-size: 19px;
+						}
+					}
+				}
+			}
+		}
+		.user-info{
+			height: 94px;
+			width: 240px;
+			padding: 10px 20px;
+			background:#1d1d21;
+			li{
+				color: #808083;
+				font-size: 12px;
+				margin-bottom: 5px;
+				.w{
+					color: #c9c9c9;
+				}
+				.long{
+					margin-right: 30px;
+				}
+				.midium{
+					margin-right: 15px;
+				}
+			}
+			.info-index{
+				font-size: 14px;
+				margin-bottom: 8px;
+			}
+			.far{
+				margin-bottom: 8px;
+			}
+		}
+		.user-option{
+			height: 170px;
+			li{
+				height: 34px;
+				padding-left: 20px;
+				a{
+					font-size: 14px;
+					color: #f2f1e6;
+					line-height:34px;
+				}
+			}
+			.split{
+				border-bottom: 1px solid #2b2b31;
+				height: 33px;
+			}
+		}
+	}
+	.setting-right{
+		width: 880px;
+		float: right;
+		&>.active{
+			display: block !important;
+		}
+		.setting-nav{
+			width: 100%;
+			height: 40px;
+			background:#1d1d21;
+			li{
+				float: left;
+				height: 40px;
+				margin-left: 20px;
+				margin-right: 10px;
+				a{
+					line-height: 40px;
+					font-size:16px;
+					color: #929295;
+				}
+			}
+			.active{
+				height: 38px;
+				border-bottom: 2px solid #8fc31f;
+				a{
+					color: #8fc31f;
+				}
+			}
+		}
+		.option-panel{
+			width: 820px;
+			height: 470px;
+			padding: 30px;
+			background:#1d1d21;
+			margin-top: 10px;
+			display: none;
+			.btn-upload{
+				width: 115px;
+				height: 35px;
+				border:none;
+				display: inline-block;
+				background:#8fc31f url('../img/upload.png') 20px center no-repeat;
+				color: #f9fbf5;
+				font-size: 14px;
+				text-indent: 18px;
+			}
+			.tip{
+				font-size: 12px;
+				color: #929295;
+				margin: 10px 0;
+			}
+			.pic-box{
+				width: 299px;
+				height: 299px;
+				border: 1px solid #3c3c45;
+				float: left;
+				color: #2b2b31;
+				p{
+					text-align: center;
+					font-size: 22px;
+				}
+				.s{
+					margin-top: 120px;
+					margin-bottom: 10px;
+				}
+				.w{
+					font-size: 14px;
+				}
+			}
+			.pic-choose{
+				width: 380px;
+				height: 260px;
+				padding: 20px;
+				background:#242429;
+				margin-left: 30px;
+				float: left;
+				.size-list{
+					margin-top: 35px;
+					li{
+						width: 120px;
+						height: 180px;
+						float: left;
+						img{
+							display: block;
+							margin: 0 auto;
+						}
+						p{
+							text-align: center;
+							font-size: 12px;
+							color: #929295;
+						}
+					}
+					.big{
+						margin-right: 20px;
+						img{
+							margin-bottom: 30px;
+						}
+					}
+					.middle{
+						img{
+							width: 60px;
+							height: 60px;
+							margin-top: 50px;
+							margin-bottom: 25px;
+						}
+					}
+					.small{
+						img{
+							width: 30px;
+							height: 30px;
+							margin-top: 65px;
+							margin-bottom: 40px;
+						}
+					}
+				}
+			}
+			.pwd-box{
+				input:not([type='submit']){
+					display: block;
+					width: 240px;
+					height: 40px;
+					background:#40453f;
+					color:#929295;
+					border: none;
+					margin-bottom: 20px;
+					text-indent: 10px;
+					font-size: 14px;
+				}
+				input[type='submit']{
+					font-size: 14px;
+					display: block;
+					width: 90px;
+					height: 40px;
+					background:#8fc31f;
+					color: #f2f1e6;
+					border: none;
+				}
+			}
+		}
+	}
+}
