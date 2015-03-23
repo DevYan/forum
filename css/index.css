@@ -1,5 +1,6 @@
 /*reset*/
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, input, textarea, p, blockquote, th, td {
   padding: 0;
   margin: 0; }
 
@@ -100,7 +101,7 @@ body {
         position: absolute;
         right: 0;
         top: 10px;
-        background: #fff url('../img/mini.png') 13px center no-repeat;
+        background: white url("../img/mini.png") 13px center no-repeat;
         border: none;
         text-indent: 35px;
         font-size: 14px;
@@ -298,17 +299,17 @@ body {
             height: 30px;
             vertical-align: middle; }
           #main #main-left .title-nav .toggle-view li .view1 {
-            background: transparent url('../img/view1.png') left top no-repeat; }
+            background: transparent url("../img/view1.png") left top no-repeat; }
             #main #main-left .title-nav .toggle-view li .view1:hover {
-              background: transparent url('../img/v1-h.png') left top no-repeat; }
+              background: transparent url("../img/v1-h.png") left top no-repeat; }
           #main #main-left .title-nav .toggle-view li .view2 {
-            background: transparent url('../img/v2.png') left top no-repeat; }
+            background: transparent url("../img/v2.png") left top no-repeat; }
             #main #main-left .title-nav .toggle-view li .view2:hover {
-              background: transparent url('../img/v2-h.png') left top no-repeat; }
+              background: transparent url("../img/v2-h.png") left top no-repeat; }
         #main #main-left .title-nav .toggle-view .active .view1 {
-          background: transparent url('../img/v1.png') left top no-repeat; }
+          background: transparent url("../img/v1.png") left top no-repeat; }
         #main #main-left .title-nav .toggle-view .active .view2 {
-          background: transparent url('../img/view2.png') left top no-repeat; }
+          background: transparent url("../img/view2.png") left top no-repeat; }
     #main #main-left .subject-list {
       display: none; }
     #main #main-left .active {
@@ -423,7 +424,7 @@ body {
         #main #main-left .tree-view .tie-item .tie-content .tree-bottom p {
           width: 100px;
           float: right;
-          background: transparent url('../img/pr-ico.png') left center no-repeat;
+          background: transparent url("../img/pr-ico.png") left center no-repeat;
           padding-left: 20px; }
           #main #main-left .tree-view .tie-item .tie-content .tree-bottom p em {
             color: #526434; }
@@ -538,10 +539,10 @@ body {
         display: inline-block;
         text-indent: 15px; }
       #raise .raise-post-list .rpl-left .post-num {
-        background: transparent url('../img/info-ico.png') left top no-repeat;
+        background: transparent url("../img/info-ico.png") left top no-repeat;
         margin-right: 10px; }
       #raise .raise-post-list .rpl-left .replay-num {
-        background: transparent url('../img/chat-ico.png') left top no-repeat; }
+        background: transparent url("../img/chat-ico.png") left top no-repeat; }
       #raise .raise-post-list .rpl-left .money {
         font-size: 12px;
         color: #8c8c8f;
@@ -693,12 +694,12 @@ body {
             height: 20px;
             display: inline-block;
             float: left;
-            background: transparent url('../img/pre-q.png') left top no-repeat; }
+            background: transparent url("../img/pre-q.png") left top no-repeat; }
           #raise .raise-post-list .rpl-right .content .quote p {
             width: 735px;
             float: left;
             padding-right: 30px;
-            background: transparent url('../img/next-q.png') right bottom no-repeat; }
+            background: transparent url("../img/next-q.png") right bottom no-repeat; }
           #raise .raise-post-list .rpl-right .content .quote .triangle {
             position: absolute;
             width: 0;
@@ -962,7 +963,7 @@ body {
     padding: 20px 30px;
     width: 1140px;
     height: 410px;
-    background: #1d1d21 url('../img/404.png') right bottom no-repeat; }
+    background: #1d1d21 url("../img/404.png") right bottom no-repeat; }
     #notFound .not-box h1 {
       font-size: 16px;
       color: #aeff00;
@@ -1025,7 +1026,7 @@ body {
             margin-top: 20px; }
           #setting .setting-left .user .ur .contact .mail {
             width: 32px;
-            background: transparent url('../img/mail-ico.png') center center no-repeat; }
+            background: transparent url("../img/mail-ico.png") center center no-repeat; }
           #setting .setting-left .user .ur .contact .care {
             font-size: 12px;
             line-height: 32px;
@@ -1105,7 +1106,7 @@ body {
         height: 35px;
         border: none;
         display: inline-block;
-        background: #8fc31f url('../img/upload.png') 20px center no-repeat;
+        background: #8fc31f url("../img/upload.png") 20px center no-repeat;
         color: #f9fbf5;
         font-size: 14px;
         text-indent: 18px; }
@@ -1118,15 +1119,64 @@ body {
         height: 299px;
         border: 1px solid #3c3c45;
         float: left;
-        color: #2b2b31; }
+        color: #2b2b31;
+        position: relative; }
         #setting .setting-right .option-panel .pic-box p {
           text-align: center;
-          font-size: 22px; }
+          font-size: 22px;
+          display: none; }
         #setting .setting-right .option-panel .pic-box .s {
           margin-top: 120px;
           margin-bottom: 10px; }
         #setting .setting-right .option-panel .pic-box .w {
           font-size: 14px; }
+        #setting .setting-right .option-panel .pic-box .cover-layer {
+          width: 299px;
+          height: 299px;
+          position: absolute;
+          z-index: 10;
+          left: 0;
+          top: 0;
+          background: #333;
+          opacity: 0.7; }
+        #setting .setting-right .option-panel .pic-box .upload-pic {
+          display: block;
+          margin: 0 auto; }
+        #setting .setting-right .option-panel .pic-box .clip-layer {
+          position: absolute;
+          width: 299px;
+          height: 299px;
+          z-index: 15;
+          left: 0;
+          top: 0;
+          clip: rect(0 190px 105px 85px); }
+          #setting .setting-right .option-panel .pic-box .clip-layer img {
+            display: block;
+            margin: 0 auto; }
+        #setting .setting-right .option-panel .pic-box .size-handle {
+          width: 104px;
+          height: 104px;
+          border: 1px solid #8fc31f;
+          position: absolute;
+          z-index: 20;
+          left: 85px;
+          top: 0px; }
+          #setting .setting-right .option-panel .pic-box .size-handle .handle-body {
+            position: absolute;
+            width: 104px;
+            height: 104px;
+            left: 0;
+            top: 0;
+            cursor: url("../img/move.png"), move; }
+          #setting .setting-right .option-panel .pic-box .size-handle .handle-bar {
+            width: 11px;
+            height: 11px;
+            background: #8fc31f;
+            border: 1px solid #aeff00;
+            position: absolute;
+            right: -13px;
+            bottom: -13px;
+            cursor: se-resize; }
       #setting .setting-right .option-panel .pic-choose {
         width: 380px;
         height: 260px;

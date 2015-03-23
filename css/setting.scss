@@ -170,9 +170,11 @@
 				border: 1px solid #3c3c45;
 				float: left;
 				color: #2b2b31;
+				position: relative;
 				p{
 					text-align: center;
 					font-size: 22px;
+					display: none;
 				}
 				.s{
 					margin-top: 120px;
@@ -180,6 +182,60 @@
 				}
 				.w{
 					font-size: 14px;
+				}
+				.cover-layer{
+					width: 299px;
+					height: 299px;
+					position: absolute;
+					z-index: 10;
+					left: 0;
+					top: 0;
+					background:#333;
+					opacity: 0.7;
+				}
+				.upload-pic{
+					display: block;
+					margin: 0 auto;
+				}
+				.clip-layer{
+					position: absolute;
+					width: 299px;
+					height: 299px;
+					z-index: 15;
+					left: 0;
+					top: 0;
+					clip:rect(0 190px 105px 85px);
+					img{
+						display: block;
+						margin: 0 auto;
+					}
+				}
+				.size-handle{
+					width: 104px;
+					height: 104px;
+					border: 1px solid #8fc31f;
+					position: absolute;
+					z-index: 20;
+					left: 85px;
+					top: 0px;
+					.handle-body{
+						position: absolute;
+						width: 104px;
+						height: 104px;
+						left: 0;
+						top: 0;
+						cursor: url('../img/move.png'),move;
+					}
+					.handle-bar{
+						width: 11px;
+						height: 11px;
+						background:#8fc31f;
+						border: 1px solid #aeff00;
+						position: absolute;
+						right: -13px;
+						bottom: -13px;
+						cursor: se-resize;
+					}
 				}
 			}
 			.pic-choose{
