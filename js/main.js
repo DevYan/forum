@@ -75,6 +75,30 @@ $(function(){
 	/*
 		事件区
 	*/
+	//头像上传触发
+	$('.change-head-pic .btn-upload').change(function(event){
+		if ($(this).val()!=='') {
+			var uploadFile = event.target.files[0];
+			if (!(/\.(jpg|jpeg|gif|png)$/i).test(uploadFile.name)) {
+            	alert('请选择一张图片进行上传');
+                $(this).val('');
+            } else if (uploadFile.size > 3000000) { // 3mb
+            	alert('您上传的图片过大,最大文件大小为 3 MB');
+                $(this).val('');
+            } else {
+				var tmppath = URL.createObjectURL(uploadFile);
+				$('.pic-box').addClass('uploaded-l');
+				$('.size-list').addClass('uploaded');
+				$('.upload-pic2').attr('src',tmppath);
+				$('.upload-pic2').eq(0).load(function(){
+					adjustImg($(this).width(),$(this).height());
+				});
+				//isImgLoad(adjustImg);
+				previewAll();
+            }
+		}
+	});
+
 	//尺寸大小控制触发
 	$('.size-handle .handle-bar').mousedown(function(e){
 		ifBool = true;
@@ -107,12 +131,27 @@ $(function(){
 	/*
 		函数区
 	*/
+	//上传图片过大调整
+	function adjustImg(w,h){
+		var max = w >= h ? w : h;
+		var min = w < h ? w : h;
+		console.log(w+' '+h);
+		var rate = max/min;
+		if (max>300) {
+			if (w >= h) {
+				$('.upload-pic2').height(300/rate).width(300);
+			}else{
+				$('.upload-pic2').height(300).width(300/rate);
+			}
+		};
+	}
+	
 	function resize(e){
 		var x = e.clientX;//鼠标横坐标
 		var y = e.clientY;//鼠标纵坐标
 
 		var ox = x - $('.pic-box').offset().left,
-			oy = y-$('.pic-box').offset().top,
+			oy = y - $('.pic-box').offset().top,
 			ow = $('.pic-box').width(),
 			oh = $('.pic-box').height();
 			if((ox>ow)||(oy>oh)) return;
@@ -127,6 +166,7 @@ $(function(){
 		$('.size-handle').width(distance).height(distance);
 		cross();
 		sync();
+		previewAll();
 	}
 
 	function pan(e){
@@ -136,6 +176,7 @@ $(function(){
 		});
 		cross();
 		sync();
+		previewAll();
 	}
 
 	function cross () {
@@ -193,9 +234,64 @@ $(function(){
 			(elem_x-p_x)+'px)');
 	}
 
+	//预览显示
+	function previewAll(){
+		preview($('.size-list .big'),120);
+		preview($('.size-list .middle'),60);
+		preview($('.size-list .small'),32);
+	}
+
+	function preview(obj,meta){
+		//原图选区宽高
+		var sideWidth = $('.size-handle').width();
+		//原图选区偏移
+		var o_left = $('.size-handle').offset().left-$('.pic-box').offset().left;
+		var o_top = $('.size-handle').offset().top-$('.pic-box').offset().top;
+		//缩放比例
+		var rate = sideWidth/meta;
+		//缩放后图片尺寸
+		var imgW = $('.clip-layer img').width()/rate;
+		var imgH = $('.clip-layer img').height()/rate;
+		obj.find('.clip-layer-preview img').width(imgW).height(imgH);
+		obj.find('.clip-layer-preview').width(300/rate).height(300/rate)
+		.css('left',(-1)*(o_left/rate)+'px').css('top',(-1)*(o_top/rate)+'px');
+	}
+
 /*
  * DICE页面
  */
+ //调整概率触发
+	$('.progress .bar').mousedown(function(e){
+		ifBool = true;
+		moveType ='adjustRage';
+	})
+	$(window).mousemove(function(e){
+		if (!ifBool) return;
+		e.preventDefault();
+		
+		if( moveType == 'adjustRage') adjustRage(e);
+	})
+	function adjustRage(e){
+		var hor = e.clientX - $('.bar-bg').offset().left;
+		if (hor<0||hor>$('.bar-bg').width()) return;
+		$('.progress .bar').width(hor);
+		var wRate = hor/$('.bar-bg').width()*100;
+		var index = 2;
+		if (wRate<10) {
+			index=1;
+		}else if(wRate>99){
+			wRate=100;
+			index == 3;
+		}
+		wRate = wRate + '' ;
+		if (wRate=='100') {
+			$('.win-rate').html(100);
+			return;
+		};
+		$('.win-rate').html(wRate.substring(0,index));
+	}
+
+
  //导航切换
 	 $('.dice-nav li').click(function(e){
 	 	e.preventDefault();

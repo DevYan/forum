@@ -1102,14 +1102,14 @@ body {
       margin-top: 10px;
       display: none; }
       #setting .setting-right .option-panel .btn-upload {
-        width: 115px;
+        width: 0px;
         height: 35px;
-        border: none;
         display: inline-block;
-        background: #8fc31f url("../img/upload.png") 20px center no-repeat;
-        color: #f9fbf5;
-        font-size: 14px;
-        text-indent: 18px; }
+        background: transparent url("../img/btn-upload.png") left top no-repeat;
+        cursor: pointer;
+        border: none;
+        padding-left: 115px;
+        overflow: hidden; }
       #setting .setting-right .option-panel .tip {
         font-size: 12px;
         color: #929295;
@@ -1123,7 +1123,8 @@ body {
         position: relative; }
         #setting .setting-right .option-panel .pic-box p {
           text-align: center;
-          font-size: 22px;
+          font-size: 22px; }
+        #setting .setting-right .option-panel .pic-box .next {
           display: none; }
         #setting .setting-right .option-panel .pic-box .s {
           margin-top: 120px;
@@ -1139,7 +1140,7 @@ body {
           top: 0;
           background: #333;
           opacity: 0.7; }
-        #setting .setting-right .option-panel .pic-box .upload-pic {
+        #setting .setting-right .option-panel .pic-box .upload-pic2 {
           display: block;
           margin: 0 auto; }
         #setting .setting-right .option-panel .pic-box .clip-layer {
@@ -1163,8 +1164,8 @@ body {
           top: 0px; }
           #setting .setting-right .option-panel .pic-box .size-handle .handle-body {
             position: absolute;
-            width: 104px;
-            height: 104px;
+            width: 100%;
+            height: 100%;
             left: 0;
             top: 0;
             cursor: url("../img/move.png"), move; }
@@ -1177,6 +1178,10 @@ body {
             right: -13px;
             bottom: -13px;
             cursor: se-resize; }
+      #setting .setting-right .option-panel .uploaded-l .pre {
+        display: none; }
+      #setting .setting-right .option-panel .uploaded-l .next {
+        display: block; }
       #setting .setting-right .option-panel .pic-choose {
         width: 380px;
         height: 260px;
@@ -1197,20 +1202,60 @@ body {
               text-align: center;
               font-size: 12px;
               color: #929295; }
+          #setting .setting-right .option-panel .pic-choose .size-list .preview {
+            overflow: hidden;
+            position: relative; }
           #setting .setting-right .option-panel .pic-choose .size-list .big {
             margin-right: 20px; }
-            #setting .setting-right .option-panel .pic-choose .size-list .big img {
-              margin-bottom: 30px; }
-          #setting .setting-right .option-panel .pic-choose .size-list .middle img {
-            width: 60px;
+            #setting .setting-right .option-panel .pic-choose .size-list .big .preview {
+              height: 120px;
+              width: 120px;
+              margin: 0 auto;
+              margin-bottom: 30px;
+              background: transparent url("../img/grey-big.png") left top no-repeat; }
+          #setting .setting-right .option-panel .pic-choose .size-list .middle .preview {
             height: 60px;
+            width: 60px;
+            margin: 0 auto;
             margin-top: 50px;
-            margin-bottom: 25px; }
-          #setting .setting-right .option-panel .pic-choose .size-list .small img {
-            width: 30px;
-            height: 30px;
+            margin-bottom: 25px;
+            background: transparent url("../img/grey-middle.png") left top no-repeat; }
+          #setting .setting-right .option-panel .pic-choose .size-list .small .preview {
+            height: 32px;
+            width: 32px;
+            margin: 0 auto;
             margin-top: 65px;
-            margin-bottom: 40px; }
+            margin-bottom: 40px;
+            background: transparent url("../img/grey-small.png") left top no-repeat; }
+          #setting .setting-right .option-panel .pic-choose .size-list .clip-layer-preview {
+            display: none; }
+        #setting .setting-right .option-panel .pic-choose .uploaded .clip-layer-preview {
+          display: block;
+          position: absolute;
+          background: #2b2d2d; }
+          #setting .setting-right .option-panel .pic-choose .uploaded .clip-layer-preview img {
+            margin: 0  auto; }
+        #setting .setting-right .option-panel .pic-choose .uploaded .big .preview span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 120px;
+          height: 120px;
+          background: transparent url("../img/green-big.png") left top no-repeat; }
+        #setting .setting-right .option-panel .pic-choose .uploaded .middle .preview span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 60px;
+          height: 60px;
+          background: transparent url("../img/green-middle.png") left top no-repeat; }
+        #setting .setting-right .option-panel .pic-choose .uploaded .small .preview span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 32px;
+          height: 32px;
+          background: transparent url("../img/green-small.png") left top no-repeat; }
       #setting .setting-right .option-panel .pwd-box input:not([type='submit']) {
         display: block;
         width: 240px;
@@ -1285,6 +1330,8 @@ body {
       #dice .dice-main .roll .item .type1 {
         background: #40453f;
         color: #929295; }
+        #dice .dice-main .roll .item .type1 span {
+          display: inline; }
       #dice .dice-main .roll .item .type2 {
         background: #3c3c45;
         color: #8fc31f; }
@@ -1310,7 +1357,8 @@ body {
             width: 23%;
             height: 10px;
             border-radius: 10px;
-            background: #8fc31f; }
+            background: #8fc31f;
+            cursor: e-resize; }
         #dice .dice-main .roll .row1 .progress .ruler {
           color: #3c3c45;
           font-size: 12px;

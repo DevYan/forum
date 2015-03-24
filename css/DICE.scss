@@ -63,6 +63,9 @@
 				.type1{
 					background:#40453f;
 					color: #929295;
+					span{
+						display: inline;
+					}
 				}
 				.type2{
 					background:#3c3c45;
@@ -93,6 +96,7 @@
 							height: 10px;
 							border-radius: 10px;
 							background:#8fc31f;
+							cursor: e-resize;
 						}
 					}
 					.ruler{
